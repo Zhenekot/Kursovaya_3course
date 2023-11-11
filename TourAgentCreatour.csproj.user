@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AddClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddHotel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddPosition.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddSale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddTour.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddTransport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="AddTransportation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DatailSale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DatailTour.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditClient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditEmployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditHotel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditPosition.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditSale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditTour.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditTransport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="EditTransportation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Main_menu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vclient.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vemployee.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vhotel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vsale.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vstatistic.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vtransport.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="vtransportation.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AddClient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddHotel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddPosition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddSale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTour.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTransport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="AddTransportation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DatailSale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DatailTour.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditClient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditEmployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditHotel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditPosition.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditSale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditTour.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditTransport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EditTransportation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Main_menu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vclient.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vemployee.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vhotel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vsale.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vstatistic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vtransport.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="vtransportation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

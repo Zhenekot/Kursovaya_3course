@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="backArrow.png" />
+    <None Remove="edit-button.png" />
+    <None Remove="logo1.png" />
+    <None Remove="remove.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="backArrow.png" />
+    <Resource Include="edit-button.png" />
+    <Resource Include="logo1.png" />
+    <Resource Include="remove.png" />
+  </ItemGroup>
+
+</Project>

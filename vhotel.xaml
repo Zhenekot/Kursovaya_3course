@@ -1,0 +1,72 @@
+﻿<Page x:Class="TourAgentCreatour.vhotel"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TourAgentCreatour"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="vhotel">
+
+    <Grid Background="#ccd7ed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.1*" MaxHeight="50" MinHeight="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10 5 0 10" VerticalAlignment="Top">
+            <TextBox Background="Snow" BorderBrush="#f2cdc7" MinWidth="200" Margin="0 0 10 0" x:Name="searchTextBox" TextChanged="searchTextBox_TextChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="14">Класс отеля:</TextBlock>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="CheckBut1" Content="1" Margin="10 0 30 0"  Click="CheckBut1_Click" IsChecked="False"/>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="CheckBut2" Content="2" Margin="0 0 30 0" Click="CheckBut2_Click"></CheckBox>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="CheckBut3" Content="3" Margin="0 0 30 0" Click="CheckBut3_Click"></CheckBox>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="CheckBut4" Content="4" Click="CheckBut4_Click" Margin="0 0 30 0"></CheckBox>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="CheckBut5" Content="5" Click="CheckBut5_Click" Margin="0 0 30 0"></CheckBox>
+            </StackPanel>
+        </StackPanel>
+        <DataGrid Background="#e3e9f6" Grid.Row="0" Margin="0 30 0 0" Name="hotelDataGridView" AutoGenerateColumns="False"
+                  FontSize="16">
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="MenuER" Background="#e3e9f6">
+                   
+                    <MenuItem Header="Редактировать" Click="editButton_Click"></MenuItem>
+                    <MenuItem Header="Удалить" Click="removeButton_Click"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn x:Name="DataGridBut">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Height="25" Width="25"
+                                        Background="Transparent"
+                                        BorderThickness="0" Name="editButton" Click="editButton_Click">
+                                    <Image Height="20" Source="/edit-button.png" />
+
+                                </Button>
+                                <Button Height="25" Width="25"
+                                        Background="Transparent"
+                                        BorderThickness="0" Name="removeButton" Click="removeButton_Click">
+                                    <Image Source="/remove.png" />
+
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Название"
+                                    Binding="{Binding Path=title}" x:Name="titleView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Класс отеля"
+                                    Binding="{Binding Path=hotel_class}" x:Name="hotelClassView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Город"
+                                    Binding="{Binding Path=city}" x:Name="cityView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Адрес отеля"
+                                    Binding="{Binding Path=address}" x:Name="addressView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Номер телефона"
+                                    Binding="{Binding Path=phone_number}" x:Name="phoneNumberView"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Background="Snow" BorderBrush="#f2cdc7" Grid.Row="1" x:Name="addHotel"  FontSize="14"  MinWidth="100" MaxWidth="150" MinHeight="30" MaxHeight="50" Content="Добавить" Margin="0 0 10 0" Click="Button_AddHotel" HorizontalAlignment="Left" />
+    </Grid>
+</Page>

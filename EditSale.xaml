@@ -1,0 +1,112 @@
+﻿<Window x:Class="TourAgentCreatour.EditSale"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourAgentCreatour"
+        mc:Ignorable="d"
+        Title="Редактировать бронирование" Height="500" Width="300" ResizeMode="NoResize">
+    <Grid  Background="#ccd7ed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" >Редактирование бронирования</TextBlock>
+        <StackPanel Grid.Row="1">
+            <TextBlock Margin="10 15 10 0">Клиент</TextBlock>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" Name="clientView" SelectedValuePath="id_client">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextBlock Text="{Binding Path=surname}" ></TextBlock>-->
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0} {1}">
+                                    <Binding Path="name" />
+                                    <Binding Path="surname" />
+
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <TextBlock Margin="10 15 10 0">Перевозка</TextBlock>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30"  Name="tourView" SelectedValuePath="id_transportation">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextBlock Text="{Binding Path=TourEntity.title}" ></TextBlock>-->
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0} {1} {2}">
+                                    <Binding Path="TourEntity.title" />
+                                    <Binding Path="start_date" />
+                                    <Binding Path="end_date" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3">
+            <TextBlock Margin="10 15 10 0">Отель</TextBlock>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30"  Name="hotelView" SelectedValuePath="id_hotel">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextBlock Text="{Binding Path=title}" ></TextBlock>-->
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0} {1}">
+                                    <Binding Path="title" />
+                                    <Binding Path="city" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5">
+            <TextBlock Margin="10 15 10 0">Сотрудник</TextBlock>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30"  Name="employeeView" SelectedValuePath="id_employee">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <!--<TextBlock Text="{Binding Path=surname}" ></TextBlock>-->
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0} {1}">
+                                    <Binding Path="name" />
+                                    <Binding Path="surname" />
+                                    
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Grid.Row="6">
+            <TextBlock Margin="10 15 10 0">Статус</TextBlock>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30"  Name="StatusView" SelectedValuePath="Value">
+                <ComboBoxItem>Продано</ComboBoxItem>
+                <ComboBoxItem>Отказ</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="8" HorizontalAlignment="Center" Margin="0 30 0 0">
+            <Button Background="Snow" BorderBrush="#f2cdc7" Content="Отмена" Click="Button_Cancel" Margin="0 0 30 0" Width="70" FontSize="18"/>
+            <Button Background="Snow" BorderBrush="#f2cdc7" Content="ОК" Click="Button_Ok" Width="70" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</Window>

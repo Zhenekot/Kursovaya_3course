@@ -1,0 +1,68 @@
+﻿<Page x:Class="TourAgentCreatour.vemployee"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TourAgentCreatour"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="vemployee">
+
+    <Grid Background="#ccd7ed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="0.1*" MaxHeight="50" MinHeight="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10 5 0 10" VerticalAlignment="Top">
+            <TextBox Background="Snow" BorderBrush="#f2cdc7" MinWidth="200" Margin="0 0 10 0" x:Name="searchTextBox" TextChanged="searchTextBox_TextChanged"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock FontSize="14">Статус:</TextBlock>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="dismissedNo" Content="Работает" Margin="10 0 30 0"  Click="dismissedNo_Click" IsChecked="False"/>
+                <CheckBox BorderBrush="#f2cdc7" Background="Snow"  FontSize="14" x:Name="dismissed" Content="Уволен" Margin="0 0 30 0" Click="dismissed_Click"></CheckBox>
+            </StackPanel>
+        </StackPanel>
+        <DataGrid Background="#e3e9f6" Grid.Row="0" Margin="0 30 0 0" Name="employeeDataGridView" AutoGenerateColumns="False"
+                  FontSize="16">
+            <DataGrid.ContextMenu>
+                <ContextMenu Background="#e3e9f6">
+                    <MenuItem Header="Редактировать" Click="editButton_Click"></MenuItem>
+                    <MenuItem Header="Удалить" Click="removeButton_Click"></MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <Button Height="25" Width="25"
+                                        Background="Transparent"
+                                        BorderThickness="0" Name="editButton" Click="editButton_Click">
+                                    <Image Height="20" Source="/edit-button.png" />
+
+                                </Button>
+                               
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn IsReadOnly="True" Header="Имя"
+                                    Binding="{Binding Path=name}" x:Name="nameView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Фамилия"
+                                    Binding="{Binding Path=surname}" x:Name="surnameView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Отчество"
+                                    Binding="{Binding Path=patronymic}" x:Name="patronymicView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Номер телефона"
+                                    Binding="{Binding Path=phone_number}" x:Name="phoneNumberView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Дата рождения"
+                                    Binding="{Binding Path=date_of_birth, StringFormat=dd-MM-yyyy}" x:Name="dateOfBirthView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Должность"
+                                    Binding="{Binding Path=PositionEntity.title}" x:Name="positionView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Статус"
+                                    Binding="{Binding Path=status}" x:Name="statusView"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Логин"
+                                    Binding="{Binding Path=login}" x:Name="loginView"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Background="Snow" BorderBrush="#f2cdc7" Grid.Row="1" FontSize="14" MinWidth="100" MaxWidth="150" MinHeight="30" MaxHeight="50" Content="Добавить" Margin="0 0 10 0" Click="Button_AddEmployee"  HorizontalAlignment="Left" />
+    </Grid>
+</Page>

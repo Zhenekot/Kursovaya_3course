@@ -1,0 +1,78 @@
+﻿<Window x:Class="TourAgentCreatour.EditHotel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TourAgentCreatour"
+        mc:Ignorable="d"
+        Title="Редактировать отель" Height="530" Width="300" ResizeMode="NoResize">
+    <Grid  Background="#ccd7ed">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="18" HorizontalAlignment="Center" VerticalAlignment="Center" >Редактирование отеля</TextBlock>
+        <StackPanel Grid.Row="1">
+            <Label Margin="10 15 10 0" Content="Название отеля:"/>
+            <TextBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" x:Name="titleView"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Label Margin="10 15 10 0" Content="Класс отеля:" />
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" x:Name="clHotelView" SelectedValuePath="Value">
+                <TextBlock>1</TextBlock>
+                <TextBlock>2</TextBlock>
+                <TextBlock>3</TextBlock>
+                <TextBlock>4</TextBlock>
+                <TextBlock>5</TextBlock>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3">
+            <Label Margin="10 15 10 0" Content="Город:"/>
+            <ComboBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" x:Name="cityView">
+                <ComboBoxItem Content="Екатеринбург"/>
+                <ComboBoxItem Content="Челябинск"/>
+                <ComboBoxItem Content="Асбест"/>
+                <ComboBoxItem Content="Берёзовский"/>
+                <ComboBoxItem Content="Верхняя Салда"/>
+                <ComboBoxItem Content="Верхняя Пышма"/>
+                <ComboBoxItem Content="Нижний Тагил"/>
+                <ComboBoxItem Content="Новоуральск"/>
+                <ComboBoxItem Content="Первоуральск"/>
+                <ComboBoxItem Content="Серов"/>
+                <ComboBoxItem Content="Пермь"/>
+                <ComboBoxItem Content="Кунгур"/>
+                <ComboBoxItem Content="Чусовой"/>
+                <ComboBoxItem Content="Соликамск"/>
+                <ComboBoxItem Content="Ирбит"/>
+                <ComboBoxItem Content="Каменск-Уральский"/>
+                <ComboBoxItem Content="Камышлов"/>
+                <ComboBoxItem Content="Краснотурьинск"/>
+                <ComboBoxItem Content="Чайковский"/>
+                <ComboBoxItem Content="Березники"/>
+                <ComboBoxItem Content="Североуральск"/>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="4">
+            <Label Margin="10 15 10 0" Content="Адрес:"/>
+            <TextBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" x:Name="addressView"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="5">
+            <Label Margin="10 15 10 0" Content="Номер телефона:" Grid.Row="4" Grid.Column="0"/>
+            <TextBox Background="Snow" BorderBrush="#f2cdc7" Margin="10 5 10 0" Height="30" x:Name="phoneNumView"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="6" HorizontalAlignment="Center" Margin="0 30 0 0">
+            <Button Background="Snow" BorderBrush="#f2cdc7" Content="Отмена" Click="Button_Cancel" Margin="0 0 30 0" Width="70" FontSize="18"/>
+            <Button Background="Snow" BorderBrush="#f2cdc7" Content="ОК" Click="Button_Ok" Width="70" FontSize="18"/>
+        </StackPanel>
+    </Grid>
+</Window>
